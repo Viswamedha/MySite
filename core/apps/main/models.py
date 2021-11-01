@@ -91,3 +91,12 @@ class User(AbstractBaseUser):
 
     def get_token(self, length: int = 40):
         return ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(length))
+
+
+
+
+
+
+
+
+

@@ -13,3 +13,17 @@ def home(request):
 
 
 
+def testing(request):
+
+    context = dict()
+
+
+
+    return render(request, 'main/testing.html', context = context)
+
+
+
+
+
+
+
