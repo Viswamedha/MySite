@@ -1,10 +1,145 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
+    <title>
+        Welcome
+    </title>
+    <link rel="icon" href="favicon.ico">
+    <style class="colour-change">
+        @keyframes bgcolor {
+            0% {
+                background-color: #45a3e5
+            }
+
+            30% {
+                background-color: #66bf39
+            }
+
+            60% {
+                background-color: #eb670f
+            }
+
+            90% {
+                background-color: #f35
+            }
+
+            100% {
+                background-color: #864cbf
+            }
+        }
+        @keyframes bgcolor2 {
+            0% {
+                background-color: #eb670f
+            }
+
+            30% {
+                background-color: #f35
+            }
+
+            60% {
+                background-color: #864cbf
+            }
+
+            90% {
+                background-color: #45a3e5
+            }
+
+            100% {
+                background-color: #66bf39
+            }
+        }
+        @keyframes bgcolor3 {
+            0% {
+                color: #f35
+            }
+
+            30% {
+                color: #864cbf
+            }
+
+            60% {
+                color: #45a3e5
+            }
+
+            90% {
+                color: #66bf39
+            }
+
+            100% {
+                color: #eb670f
+            }
+        }
+        body {
+            -webkit-animation: bgcolor 20s infinite;
+            animation: bgcolor 200s infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+        nav {
+            -webkit-animation: bgcolor2 20s infinite;
+            animation: bgcolor2 100s infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+        .nav-link, .navbar-brand {
+            -webkit-animation: bgcolor3 20s infinite;
+            animation: bgcolor3 100s infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+    </style>
+    <!-- Intentionally made it so that the navbar items are difficult to see on page load -->
 {% endblock %}
 {% block body %}
     <!--Yayy, you can use inspect element! Well done. There's nothing hidden here yet, but take a look in the future :)-->
-    <h1 class="title" style="text-align: center;">Welcome. This website is being developed right now and will be available soon! </h1>
-    <h5 class="title" style="text-align: center;">In the meantime, have a look at the image below. </h5>
-    <img src="https://i.pinimg.com/originals/3c/be/5e/3cbe5eea9728b0bc4d50ff07b356292f.gif" style="height: 600px; width: 600px; display: block; margin-left: auto; margin-right: auto; width: 50%;">
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/resources">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                </li>
+            </ul>
+            <button class="btn btn-sm btn-outline-secondary StopChangingTheColourButton" type="button">Stop Changing The Colour</button>
+        </div>
+    </nav>
+    <div class="row" style="height: 20px;">
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <!-- Just Empty To Add Space On The Left -->  
+        </div>
+        <div class="col-10">
+            <h1 class="title">About Me</h1>
+            <p class="text">
+                So what brings you here today? A random Google or did someone (perhaps myself) show you?
+                <br><br>
+                Well, you're here now, so what do you wanna know? The navbar at the top highlights a range of things that interest me,
+                and pieces I have worked on in the past. 
+            </p>
+        </div>
+        <div class="col">
+            <!-- I Like Symmetry A Lot -->
+        </div>
+    </div>
+        
+    <script>
+        $('.StopChangingTheColourButton').click( 
+            function() {
+                $('.colour-change').remove()
+                $('.StopChangingTheColourButton').remove()
+            }
+        )
+    </script>
+    
 {% endblock %}

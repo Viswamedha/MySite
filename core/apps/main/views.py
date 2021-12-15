@@ -21,7 +21,13 @@ def testing(request):
 
     return render(request, 'main/testing.html', context = context)
 
+def projects(request):
 
+    context = dict()
+
+
+
+    return render(request, 'main/projects.html', context = context)
 
 
 

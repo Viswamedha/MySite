@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Projects</title>
+    <style>
+        body {
+            background-image: "{% static 'assets/img/TechBackground.jpg' %}";
+        }
+    </style>
+{% endblock %}
+{% block background-image %}
+{% static 'assets/img/TechBackground.jpg' %}
+{% endblock %}
+{% block body %}
+    <h1 class="title" style="text-align: center;">Projects</h1>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <marquee behavior="alternate">Onii-Chan</marquee>
+                </div>
+                <div class="card-body">
+                    <marquee behavior="slide" direction="up">
+                        Onii-Chan is a Discord bot built using the Discord.py module, its documentation and months of painstaking rewrites.
+                        <br><br>
+                        Categories are split into Cogs with commands being decorated methods within them, some of which are standalone commands, such as the help command. 
+
+                    </marquee>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+{% endblock %}

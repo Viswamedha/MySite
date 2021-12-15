@@ -31,7 +31,7 @@
         <link rel="icon" href="{% static 'favicon.ico' %}">
         {% block head %}{% endblock%}
     </head>
-    <body>
+    <body style="background-image: '{% block background-image %}{% endblock %}';">
         {% block body %}{% endblock %}
     </body>
 </html>
